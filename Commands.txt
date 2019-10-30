@@ -1,0 +1,14 @@
+# Create a bridge network called ‘flamingo-network’
+docker network create --driver bridge flamingo-network
+
+# api-gateway - Build and run:
+# Build Image: (run this inside the api-gateway folder)
+docker build -t api-gateway .
+# Run container 
+docker run -d --name api-gateway --network flamingo-network -p 7000:5000
+
+# customer-service - Build and run:
+# Build Image: (run this inside the customer-service folder)
+docker build -t customer-service .
+# Run container 
+docker run -d --name customer-service --network flamingo-network
