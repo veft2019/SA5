@@ -4,9 +4,10 @@ LABEL maintainer="Hjörtur Jóhann Vignisson"
 ENV ASPNETCORE_URLS http://*:80
 
 COPY . /app
-WORKDIR /app
+WORKDIR /app/customer-service
 
 RUN dotnet restore
-RUN dotnet build
+#RUN dotnet build
 
-ENTRYPOINT ["dotnet", "run"]
+# Not working
+ENTRYPOINT ["dotnet", "run", "--project", "customer-service"]
