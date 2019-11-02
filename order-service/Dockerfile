@@ -1,5 +1,5 @@
 FROM node:latest
-LABEL maintainer="Ívar Kristinn"
+LABEL maintainer="Hjörtur J, Ívar K, Guðrún M"
 
 ENV NODE_ENV production
 ENV PORT=80

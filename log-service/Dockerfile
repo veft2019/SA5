@@ -1,5 +1,5 @@
 FROM python:3
-LABEL maintainer="Hjörtur Jóhann Vignisson"
+LABEL maintainer="Hjörtur J, Ívar K, Guðrún M"
 ENV PYTHON_ENV production
 
 COPY . /app
